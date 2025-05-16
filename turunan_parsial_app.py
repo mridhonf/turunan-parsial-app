@@ -19,7 +19,7 @@ st.write("L = Tenaga Kerja")
 st.write("K = Bahan Baku")
 st.write("C = Total Biaya") 
 st.write("1 Unit Roti = Rp 5000")
-st.write("=============================================")
+st.write("=============================================================================")
 # --- Input User ---
 f = sp.sympify(C)
 fL = sp.diff(f, L)
