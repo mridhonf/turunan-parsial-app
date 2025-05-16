@@ -6,8 +6,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # --- Simbol ---
 L, K = sp.symbols('L K')
-C = 10*L**2 + 20*K**2 + 5*L*K  # Fungsi biaya
-
+C = 10*L**2 + 20*K**2 + 5*L*K 
 # --- Turunan Parsial ---
 dC_dL = sp.diff(C, L)
 dC_dK = sp.diff(C, K)
@@ -22,8 +21,16 @@ st.write("C = Total Biaya")
 st.write("1 Unit Roti = Rp 5000")
 st.write("=============================================")
 # --- Input User ---
-L_val = st.slider("Jumlah Tenaga Kerja (L)", 0, 20, 5)
-K_val = st.slider("Jumlah Bahan Baku (K)", 0, 20, 5)
+f = sp.sympify(C)
+fL = sp.diff(f, L)
+fK = sp.diff(f, K)
+
+st.latex(f"C(L, K) = {sp.latex(f)}")
+st.latex(f"\\frac{{\\partial f}}{{\\partial L}} = {sp.latex(fL)}")
+st.latex(f"\\frac{{\\partial f}}{{\\partial K}} = {sp.latex(fK)}")
+
+L_val = st.number_input("Jumlah Tenaga Kerja (L)", value=0)
+K_val = st.number_input("Jumlah Bahan Baku (K)", value=0)
 
 # --- Evaluasi Turunan ---
 dC_dL_val = dC_dL.subs({L: L_val, K: K_val})
@@ -70,5 +77,4 @@ ax.set_xlabel('Tenaga Kerja (L)')
 ax.set_ylabel('Bahan Baku (K)')
 ax.set_zlabel('Biaya C(L,K)')
 ax.set_title('Grafik Fungsi Biaya dan Bidang Singgung')
-
 st.pyplot(fig)
