@@ -28,6 +28,7 @@ fK = sp.diff(f, K)
 st.latex(f"C(L, K) = {sp.latex(f)}")
 st.latex(f"\\frac{{\\partial f}}{{\\partial L}} = {sp.latex(fL)}")
 st.latex(f"\\frac{{\\partial f}}{{\\partial K}} = {sp.latex(fK)}")
+st.write("======================================================================================")
 
 L_val = st.number_input("Jumlah Tenaga Kerja (L)", value=0)
 K_val = st.number_input("Jumlah Bahan Baku (K)", value=0)
