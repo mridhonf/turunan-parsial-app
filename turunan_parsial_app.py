@@ -42,11 +42,11 @@ st.write(f"Turunan Parsial terhadap L: ∂C/∂L = {dC_dL}")
 st.write(f"Turunan Parsial terhadap K: ∂C/∂K = {dC_dK}")
 
 st.write(f"### Hasil Perhitungan")
-st.write(f" • Jika tenaga kerja(L) bertambah {L_val} unit, dengan bahan baku {K_val} unit (∂C/∂L) (L={L_val}, K={K_val}) Biaya Naik Sekitar ({dC_dL_val}) Unit")
+st.write(f" • Jika tenaga kerja(L) bertambah {L_val} Orang, dengan bahan baku {K_val} unit (∂C/∂L) (L={L_val}, K={K_val}) Biaya Naik Sekitar ({dC_dL_val}) Unit")
 hasil1 = dC_dL_val*5000
 st.write(f"Hasil Biaya = {dC_dL_val} * 5000 = Rp {hasil1}")
 
-st.write(f" • Jika bahan baku(K) bertambah {K_val} unit, dengan tenaga kerja {L_val} unit (∂C/∂K) (L={L_val}, K={K_val}) Biaya Naik Sekitar ({dC_dK_val}) Unit")
+st.write(f" • Jika bahan baku(K) bertambah {K_val} unit, dengan tenaga kerja {L_val} Orang (∂C/∂K) (L={L_val}, K={K_val}) Biaya Naik Sekitar ({dC_dK_val}) Unit")
 hasil2 = dC_dK_val*5000
 st.write(f"Hasil Biaya = {dC_dK_val} * 5000 = Rp {hasil2}")
 
